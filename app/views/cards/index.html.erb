@@ -1,21 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Cards</h1>
-
-<div id="cards">
+<div class="row">
   <% @cards.each do |card| %>
-    <%= render card %>
-    <p>
-      <%= link_to "Show this card", card %>
-    </p>
+    <div class="col-3">
+    <div class="card">
+      <img src="<%= card.image %>">">
+      <div class="card-body">
+        <h5 class="card-nom"><%= card.nom %></h5>
+        <p class="card-age"><%= card.age %></p>
+        <p class="card-position"><%= card.position %></p>
+      </div>
+    </div>
+    </div>
   <% end %>
 </div>
-<div class="card" style="width: 18rem;">
-<img src="https://cdn.discordapp.com/attachments/1047854883895787530/1081228850861711440/rashfrod_lion.png" class="card-img-top" alt="...">
-<div class="card-body">
-  <h5 class="card-title">Marcus Rashford</h5>
-  <p class="card-text">24 ans</p>
-  <p class="card-text">Attaquant</p>
-</div>
-</div>
+
 <%= link_to "New card", new_card_path %>
