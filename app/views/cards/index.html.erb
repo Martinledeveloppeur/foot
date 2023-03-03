@@ -10,14 +10,19 @@
     </p>
   <% end %>
 </div>
-<% @cards.each do |card| %>
-<div class="card" style="width: 18rem;">
-  <img src="" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-    <p class="card-text"></p>
-  a href="#" class="btn btn-primary"></a>
-  <% end %>
-</div>
-</div>
+<div class="row"> #style="width: 18rem;"
+  <% @cards.each do |card| %>
+      <div class="col-3">
+      <div class="card" style="width: 18rem; background-color: #FAE5C1;">
+        <%=image.tag card.image %>
+        <div class="card-body">
+          <h5 class="card-nom"><%= card.nom %></h5>
+          <p class="card-age"><%= card.age %></p>
+          #a href="#" class="btn btn-primary"></a>
+          <p class="card-position"><%= card.position %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <%= link_to "New card", new_card_path %>
