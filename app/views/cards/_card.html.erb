@@ -1,24 +1,38 @@
-<div id="<%= dom_id card %>">
-  <p>
-    <strong>Titre:</strong>
-    <%= card.titre %>
-  </p>
+#<div id="<%= dom_id card %>">
+  #<p>
+    #<strong>Titre:</strong>
+#    <%= card.titre %>
+#  </p>
+#
+#  <p>
+#    <strong>Nom:</strong>
+#    <%= card.nom %>
+#  </p>
+#
+#  <p>
+#    <strong>Age:</strong>
+#    <%= card.age %>
+#  </p>
+#
+#  <p>
+#    <strong>Position:</strong>
+#    <%= card.position %>
+#  </p>
+#
+#  <img src="<%= card.image %>">
+#
+#</div>
+def create
+  @card = Card.new(card_params)
 
-  <p>
-    <strong>Nom:</strong>
-    <%= card.nom %>
-  </p>
+  if @card.save
+    redirect_to @card
+  else
+    render 'new'
+  end
+end
 
-  <p>
-    <strong>Age:</strong>
-    <%= card.age %>
-  </p>
-
-  <p>
-    <strong>Position:</strong>
-    <%= card.position %>
-  </p>
-
-  <img src="<%= card.image %>">
-
-</div>
+private
+def card_params
+  params.require(:card).permit(:nom, :age, ;position,:image)
+end
