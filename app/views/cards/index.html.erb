@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Cards</h1>
+<h1>Effectif Joueur Football et Totem</h1>
 
 <div class="row">
   <% @cards.each do |card| %>
@@ -11,11 +11,11 @@
           <h5 class="card-nom"><%= card.nom %></h5>
           <p class="card-age"><%= card.age %></p>
           <p class="card-position"><%= card.position %></p>
-          <a href="" class="btn btn-primary"><%= link_to "Show this card", card %></a>
+          <a href="" class="btn btn-primary"><%= link_to "Regarde cette carte", card %></a>
         </div>
       </div>
     </div>
   <% end %>
 </div>
 
-<%= link_to "New card", new_card_path %>
+<%= link_to "Nouvelle carte", new_card_path %>

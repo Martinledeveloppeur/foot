@@ -1,9 +1,9 @@
-#p style="color: green"><%= notice %></p>
+p style="color: green"><%= notice %></p>
 
 <%= render @card %>
 
 <div>
-    <%= link_to "Edit this card", edit_card_path(@card) %> |
-    <%= link_to "Back to cards", cards_path %>
-    <%= button_to "Destroy this card", @card, method: :delete %>
+    <%= link_to "Edite cette carte", edit_card_path(@card) %> |
+    <%= link_to "Retourne voir les cartes", cards_path %>
+    <%= button_to "Destruit cette carte", @card, method: :delete %>
 </div>
