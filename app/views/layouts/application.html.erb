@@ -38,7 +38,11 @@
       </div>
     </nav>
 
-    <footer class="footer bg-dark text-white">
+    
+    <%= yield %>
+    
+  </body>
+  <footer class="footer bg-dark text-white">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -69,7 +73,4 @@
     </div>
   </div>
 </footer>
-    <%= yield %>
-    
-  </body>
 </html>
