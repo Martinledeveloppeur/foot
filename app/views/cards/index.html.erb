@@ -13,9 +13,22 @@
 <div class="card" style="width: 18rem;">
   <img src="<%= card.image %>" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-  a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">
+      <p>
+      <strong>Nom:</strong>
+      <%= card.nom %>
+    </p>
+    </h5>
+    <p class="card-text">
+      <p>
+        <strong>Age:</strong>
+          <%= card.age %>
+      </p>
+    </p>
+    <p>
+    <strong>Position:</strong>
+    <%= card.position %>
+  </p>
 </div>
 </div>
 <%= link_to "New card", new_card_path %>
