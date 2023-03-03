@@ -1,15 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Cards</h1>
+
 <div class="row">
   <% @cards.each do |card| %>
     <div class="col-3">
     <div class="card">
-      <img src="<%= card.image %>">">
+      <img src="<%= card.image %>">
       <div class="card-body">
         <h5 class="card-nom"><%= card.nom %></h5>
         <p class="card-age"><%= card.age %></p>
         <p class="card-position"><%= card.position %></p>
+        <a href="#" class="btn btn-primary"><%= link_to "Show this card", card %></a>
       </div>
     </div>
     </div>
